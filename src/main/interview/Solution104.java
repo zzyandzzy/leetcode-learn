@@ -1,5 +1,8 @@
 package main.interview;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * main.interview
  * 给定一个字符串，编写一个函数判定其是否为某个回文串的排列之一。
@@ -26,7 +29,9 @@ package main.interview;
  */
 public class Solution104 {
     public static void main(String[] args) {
-
+        System.out.println(canPermutePalindrome("tactcoa"));
+        System.out.println(canPermutePalindrome("abc"));
+        System.out.println(canPermutePalindrome("aaabccc"));
     }
 
     /**
@@ -34,6 +39,38 @@ public class Solution104 {
      * @return
      */
     public static boolean canPermutePalindrome(String s) {
-        return false;
+        Map<Character, Integer> map = new HashMap<>(s.length());
+        // 把s字符串里面出现的次数记录在map里面
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            int val = 1;
+            Integer oldVal = map.get(c);
+            if (oldVal != null) {
+                val += oldVal;
+            }
+            map.put(c, val);
+        }
+        // 如果回文字符串是奇数
+        // 只允许一个位置的元素是奇数
+        if (s.length() % 2 != 0) {
+            int sum = 0;
+            for (Integer val : map.values()) {
+                if (val % 2 != 0) {
+                    sum++;
+                    if (sum > 1){
+                        return false;
+                    }
+                }
+            }
+        } else {
+            // 如果是偶数回文字符串
+            // map里面不能有一个奇数字符串v
+            for (Integer val : map.values()) {
+                if (val % 2 == 1) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
