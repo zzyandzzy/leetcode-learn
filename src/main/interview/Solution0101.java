@@ -21,7 +21,7 @@ package main.interview;
  * @date 2020/6/8 8:32 上午
  * @since 1.0
  */
-public class Solution101 {
+public class Solution0101 {
     public static void main(String[] args) {
         System.out.println(isUnique("leetcode"));
         System.out.println(isUnique("abc"));

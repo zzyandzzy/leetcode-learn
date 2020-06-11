@@ -27,7 +27,7 @@ import java.util.Map;
  * @date 2020/6/8 9:09 上午
  * @since 1.0
  */
-public class Solution104 {
+public class Solution0104 {
     public static void main(String[] args) {
         System.out.println(canPermutePalindrome("tactcoa"));
         System.out.println(canPermutePalindrome("abc"));

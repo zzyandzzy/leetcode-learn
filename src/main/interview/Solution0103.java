@@ -22,7 +22,7 @@ package main.interview;
  * @date 2020/6/8 8:56 上午
  * @since 1.0
  */
-public class Solution103 {
+public class Solution0103 {
     public static void main(String[] args) {
         System.out.println(replaceSpaces("Mr John Smith    ", 13));
         System.out.println(replaceSpaces("               ", 5));

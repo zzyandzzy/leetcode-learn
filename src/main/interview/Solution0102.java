@@ -22,7 +22,7 @@ package main.interview;
  * @date 2020/6/8 8:46 上午
  * @since 1.0
  */
-public class Solution102 {
+public class Solution0102 {
     public static void main(String[] args) {
         System.out.println(CheckPermutation("hhqhxjyrghjjsmduaxppwrqkikqnfdrzjowapehtbyrgrfyprrfrebzduxvvhhu",
                 "jzvthzihsvghjhbrpfhdwixmyaxjrdzfvnhpmyrbqjpdffykqgahgzpjwvouurr"));
