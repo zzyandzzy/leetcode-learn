@@ -4,7 +4,10 @@
 - [题目详解](./leetcode/editor/cn/doc)
 - [简单](./src/main/simple)
   - [数组](./src/main/simple/array)
-- [面试题记录](./src/main/interview)
+  - [字符串](./src/main/simple/string)
+- [中等](./src/main/medium)
+  - [字符串](./src/main/medium/string)
+- [面试题](./src/main/interview)
 
 # LICENSE
     MIT License
