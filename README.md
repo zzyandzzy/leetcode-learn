@@ -1,13 +1,19 @@
 # LeetCode记录
 
+[LeetCode个人主页](https://leetcode-cn.com/u/zzyandzzy/)
+
 - [题目目录](./leetcode/editor/cn)
 - [题目详解](./leetcode/editor/cn/doc)
+
 - [简单](./src/main/simple)
   - [数组](./src/main/simple/array)
   - [字符串](./src/main/simple/string)
 - [中等](./src/main/medium)
+  - [数组](./src/main/medium/array)
   - [字符串](./src/main/medium/string)
+  
 - [面试题](./src/main/interview)
+- [其他](./src/main/other)
 
 # LICENSE
     MIT License

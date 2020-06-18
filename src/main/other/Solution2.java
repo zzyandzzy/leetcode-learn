@@ -1,4 +1,4 @@
-package main;
+package main.other;
 
 /**
  * @author intent
@@ -53,21 +53,21 @@ public class Solution2 {
      * @return
      */
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-//        main.ListNode dummyHead = new main.ListNode(0);
-//        main.ListNode p = l1, q = l2, curr = dummyHead;
+//        main.other.ListNode dummyHead = new main.other.ListNode(0);
+//        main.other.ListNode p = l1, q = l2, curr = dummyHead;
 //        int carry = 0;
 //        while (p != null || q != null) {
 //            int x = (p != null) ? p.val : 0;
 //            int y = (q != null) ? q.val : 0;
 //            int sum = carry + x + y;
 //            carry = sum / 10;
-//            curr.next = new main.ListNode(sum % 10);
+//            curr.next = new main.other.ListNode(sum % 10);
 //            curr = curr.next;
 //            if (p != null) p = p.next;
 //            if (q != null) q = q.next;
 //        }
 //        if (carry > 0) {
-//            curr.next = new main.ListNode(carry);
+//            curr.next = new main.other.ListNode(carry);
 //        }
 //        return dummyHead.next;
         ListNode result = new ListNode(0);
