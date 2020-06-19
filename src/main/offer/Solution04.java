@@ -38,7 +38,7 @@ package main.offer;
  * @date 2020/6/19 5:20 下午
  * @since 1.0
  */
-public class Solution4 {
+public class Solution04 {
     public static void main(String[] args) {
         int[][] matrix = new int[][]{
                 {1, 4, 7, 11, 15},
