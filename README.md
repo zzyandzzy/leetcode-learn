@@ -15,6 +15,7 @@
   - [链表](./src/main/medium/list)
   
 - [面试题](./src/main/interview)
+- [剑指Offer](./src/main/offer)
 - [其他](./src/main/other)
 
 # LICENSE
