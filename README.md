@@ -8,9 +8,11 @@
 - [简单](./src/main/simple)
   - [数组](./src/main/simple/array)
   - [字符串](./src/main/simple/string)
+  - [链表](./src/main/simple/list)
 - [中等](./src/main/medium)
   - [数组](./src/main/medium/array)
   - [字符串](./src/main/medium/string)
+  - [链表](./src/main/medium/list)
   
 - [面试题](./src/main/interview)
 - [其他](./src/main/other)
