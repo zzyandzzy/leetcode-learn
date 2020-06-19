@@ -1,5 +1,7 @@
 package main.simple.list;
 
+import main.util.ListNode;
+
 /**
  * main.simple.list
  * 给定一个链表，判断链表中是否有环。

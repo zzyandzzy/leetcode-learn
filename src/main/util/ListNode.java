@@ -1,4 +1,4 @@
-package main.simple.list;
+package main.util;
 
 /**
  * main.simple.list

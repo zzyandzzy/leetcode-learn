@@ -1,6 +1,6 @@
 package main.offer;
 
-import main.simple.list.ListNode;
+import main.util.ListNode;
 
 import java.util.Arrays;
 import java.util.Stack;

@@ -1,6 +1,6 @@
 package main.medium.list;
 
-import main.simple.list.ListNode;
+import main.util.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;
