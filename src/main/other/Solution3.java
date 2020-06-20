@@ -35,9 +35,10 @@ import java.util.Set;
 public class Solution3 {
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
-        System.out.println(lengthOfLongestSubstring("bbbbb"));
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
+//        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+//        System.out.println(lengthOfLongestSubstring("bbbbb"));
+//        System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring("abbaacdf"));
     }
 
     /**
@@ -81,7 +82,7 @@ public class Solution3 {
         for (int i = 0; i < s.length(); i++) {
             Character ch = s.charAt(i);
             if (map.containsKey(ch)) {
-                start = Math.max(start, map.get(ch));
+                start = Math.max(start, map.get(ch) + 1);
             }
             map.put(ch, i);
             max = Math.max(max, i - start + 1);
