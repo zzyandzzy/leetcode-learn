@@ -47,9 +47,50 @@ public class Solution04 {
                 {10, 13, 14, 17, 24},
                 {18, 21, 23, 26, 30}
         };
-        System.out.println(findNumberIn2DArray2(matrix, 5));
-        System.out.println(findNumberIn2DArray2(matrix, 20));
-        System.out.println(findNumberIn2DArray2(new int[][]{{5}, {6}}, 6));
+        System.out.println(findNumberIn2DArray3(matrix, 5));
+        System.out.println(findNumberIn2DArray3(matrix, 20));
+        System.out.println(findNumberIn2DArray3(new int[][]{{5}, {6}}, 6));
+    }
+
+    /**
+     * 根据《剑指Offer》第238页的分析
+     * 执行用时：
+     * 0 ms
+     * , 在所有 Java 提交中击败了
+     * 100.00%
+     * 的用户
+     * 内存消耗：
+     * 45.7 MB
+     * , 在所有 Java 提交中击败了
+     * 100.00%
+     * 的用户
+     *
+     * @param matrix
+     * @param target
+     * @return
+     */
+    public static boolean findNumberIn2DArray3(int[][] matrix, int target) {
+        boolean found = false;
+        // 先选择右上角的位置
+        int row = 0;
+        int column = matrix.length - 1;
+        while (matrix != null && column >= 0) {
+            if (row < matrix[column].length) {
+                if (matrix[column][row] == target) {
+                    found = true;
+                    break;
+                } else if (matrix[column][row] > target) {
+                    // 要比目标值小
+                    column--;
+                } else {
+                    // 要比目标值大
+                    row++;
+                }
+            } else {
+                break;
+            }
+        }
+        return found;
     }
 
     /**
