@@ -17,3 +17,7 @@
   - [Solution234_palindrome-linked-list_回文链表](../src/main/simple/list/Solution234.java)
   
   - [Solution876_middle-of-the-linked-list_链表的中间结点](../src/main/simple/list/Solution876.java)
+
+- 双指针
+
+  - [Solution86_partition-list_分隔链表](../src/main/medium/list/Solution86.java)
