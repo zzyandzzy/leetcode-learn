@@ -3,7 +3,6 @@
 [LeetCode个人主页](https://leetcode-cn.com/u/zzyandzzy/)
 
 - [题目目录](./leetcode/editor/cn)
-- [题目详解](./leetcode/editor/cn/doc)
 
 - [简单](./src/main/simple)
   - [数组](./src/main/simple/array)
@@ -14,9 +13,11 @@
   - [字符串](./src/main/medium/string)
   - [链表](./src/main/medium/list)
   
-- [面试题](./src/main/interview)
-- [剑指Offer](./src/main/offer)
-- [其他](./src/main/other)
+- 专题训练
+  - [链表](./readme/List.md)
+  - [面试题](./src/main/interview)
+  - [剑指Offer](./src/main/offer)
+  - [其他](./src/main/other)
 
 # LICENSE
     MIT License

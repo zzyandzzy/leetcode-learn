@@ -15,3 +15,5 @@
   - [Solution109_convert-sorted-list-to-binary-search-tree_有序链表转换二叉搜索树](../src/main/medium/list/Solution109.java)
 
   - [Solution234_palindrome-linked-list_回文链表](../src/main/simple/list/Solution234.java)
+  
+  - [Solution876_middle-of-the-linked-list_链表的中间结点](../src/main/simple/list/Solution876.java)
