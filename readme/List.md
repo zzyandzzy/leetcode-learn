@@ -25,3 +25,5 @@
   - [Solution92_reverse-linked-list-ii_反转链表 II](../src/main/medium/list/Solution92.java)
   
   - [Solution206_reverse-linked-list_反转链表](../src/main/simple/list/Solution206.java)
+  
+  - [Solution143_reorder-list_重排链表](../src/main/medium/list/Solution143.java)
