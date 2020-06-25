@@ -1,4 +1,6 @@
-package main.other;
+package main.medium.list;
+
+import main.util.ListNode;
 
 /**
  * @author intent
@@ -53,21 +55,21 @@ public class Solution2 {
      * @return
      */
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-//        main.other.ListNode dummyHead = new main.other.ListNode(0);
-//        main.other.ListNode p = l1, q = l2, curr = dummyHead;
+//        main.medium.list.ListNode dummyHead = new main.medium.list.ListNode(0);
+//        main.medium.list.ListNode p = l1, q = l2, curr = dummyHead;
 //        int carry = 0;
 //        while (p != null || q != null) {
 //            int x = (p != null) ? p.val : 0;
 //            int y = (q != null) ? q.val : 0;
 //            int sum = carry + x + y;
 //            carry = sum / 10;
-//            curr.next = new main.other.ListNode(sum % 10);
+//            curr.next = new main.medium.list.ListNode(sum % 10);
 //            curr = curr.next;
 //            if (p != null) p = p.next;
 //            if (q != null) q = q.next;
 //        }
 //        if (carry > 0) {
-//            curr.next = new main.other.ListNode(carry);
+//            curr.next = new main.medium.list.ListNode(carry);
 //        }
 //        return dummyHead.next;
         ListNode result = new ListNode(0);
@@ -87,14 +89,5 @@ public class Solution2 {
             current.next = new ListNode(carry);
         }
         return result.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
     }
 }
