@@ -41,3 +41,5 @@
   - [Solution24_swap-nodes-in-pairs_两两交换链表中的节点](../src/main/medium/list/Solution24.java)
   
   - [Solution61_rotate-list_旋转链表](../src/main/medium/list/Solution61.java)
+  
+  - [Solution82_remove-duplicates-from-sorted-list-ii_删除排序链表中的重复元素 II.java](../src/main/medium/list/Solution82.java)
