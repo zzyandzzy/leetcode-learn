@@ -42,4 +42,6 @@
   
   - [Solution61_rotate-list_旋转链表](../src/main/medium/list/Solution61.java)
   
-  - [Solution82_remove-duplicates-from-sorted-list-ii_删除排序链表中的重复元素 II.java](../src/main/medium/list/Solution82.java)
+  - [Solution82_remove-duplicates-from-sorted-list-ii_删除排序链表中的重复元素 II](../src/main/medium/list/Solution82.java)
+  
+  - [Solution83_remove-duplicates-from-sorted-list_删除排序链表中的重复元素](../src/main/simple/list/Solution83.java)
