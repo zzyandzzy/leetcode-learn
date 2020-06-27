@@ -1,5 +1,7 @@
 package main.interview;
 
+import main.util.ListNode;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -92,15 +94,6 @@ public class Solution0201 {
             //链表不为空，呢么一定会有至少一个节点在上面，也就是满足过if条件的，
             //那么根据if中的代码，head.next就是这里返回的。
             return removeDuplicateNodes(head.next);
-        }
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
         }
     }
 }
