@@ -18,6 +18,10 @@
   - [面试题](./src/main/interview)
   - [剑指Offer](./src/main/offer)
   - [其他](./src/main/other)
+  
+- 竞赛
+  - [双周赛](./src/main/biweekly/contest)
+    - [29](./src/main/biweekly/contest/n29)
 
 # LICENSE
     MIT License
