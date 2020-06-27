@@ -1,5 +1,11 @@
 # 链表练题合集
 
+很多题目都是来着其他大神们的总结。
+
+参考链接：
+
+- [CSDN-algsup-leetcode刷题总结之链表](https://xiaoneng.blog.csdn.net/article/details/104007259)
+
 ## 双指针法
 
 - 快慢指针
