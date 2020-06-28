@@ -1,10 +1,10 @@
-package main.biweekly.contest.n29;
+package main.contest.biweekly.n29;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * main.biweekly.contest.n29
+ * main.contest.n29
  * n 的第 k 个因子
  * <p>
  * 给你两个正整数 n 和 k 。

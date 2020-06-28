@@ -20,8 +20,10 @@
   - [其他](./src/main/other)
   
 - 竞赛
-  - [双周赛](./src/main/biweekly/contest)
-    - [29](./src/main/biweekly/contest/n29)
+  - [周赛](src/main/contest/weekly)
+    - [195](src/main/contest/weekly/n195)
+  - [双周赛](src/main/contest/biweekly)
+    - [29](src/main/contest/biweekly/n29)
 
 # LICENSE
     MIT License

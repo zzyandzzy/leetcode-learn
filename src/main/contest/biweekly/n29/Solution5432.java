@@ -1,9 +1,9 @@
-package main.biweekly.contest.n29;
+package main.contest.biweekly.n29;
 
 import java.util.Arrays;
 
 /**
- * main.biweekly.contest.n29
+ * main.contest.n29
  * <p>
  * 去掉最低工资和最高工资后的工资平均值
  * <p>

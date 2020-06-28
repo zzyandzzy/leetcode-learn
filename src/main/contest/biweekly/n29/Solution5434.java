@@ -1,7 +1,6 @@
-package main.biweekly.contest.n29;
+package main.contest.biweekly.n29;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
