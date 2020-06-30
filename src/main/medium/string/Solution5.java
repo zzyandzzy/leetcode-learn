@@ -1,4 +1,8 @@
-package main.other;
+package main.medium.string;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author intent
@@ -24,13 +28,14 @@ package main.other;
 public class Solution5 {
     public static void main(String[] args) {
         System.out.println(longestPalindrome("babad"));
-//        System.out.println(longestPalindrome("cbbd"));
-//        System.out.println(longestPalindrome("abcdcba"));
+        System.out.println(longestPalindrome("cbbd"));
+        System.out.println(longestPalindrome("abcdcba"));
     }
 
-
     public static String longestPalindrome(String s) {
-        if (s == null || s.length() < 1) return "";
+        if (s == null || s.length() < 1) {
+            return "";
+        }
         int start = 0, end = 0;
         for (int i = 0; i < s.length(); i++) {
             int len1 = expandAroundCenter(s, i, i);
