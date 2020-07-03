@@ -48,7 +48,9 @@ import main.util.ListNode;
  */
 public class Solution141 {
     public static void main(String[] args) {
-
+        ListNode node = new ListNode(1);
+        node.add(2);
+        System.out.println(hasCycle(node));
     }
 
     /**
@@ -71,7 +73,7 @@ public class Solution141 {
         // 快指针一次移动两个
         ListNode fast = head.next;
         while (slow != fast) {
-            if (slow == null || fast == null) {
+            if (slow == null || fast == null || fast.next == null) {
                 return false;
             }
             fast = fast.next.next;
