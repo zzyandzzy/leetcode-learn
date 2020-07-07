@@ -40,19 +40,58 @@ package main.offer;
  */
 public class Solution12 {
     public static void main(String[] args) {
-
+        System.out.println(exist(new char[][]{
+                {'c', 'b', 'c', 'e' },
+                {'b', 'f', 'c', 's' },
+                {'a', 'd', 'e', 'e' },
+        }, "fdec"));
     }
 
     /**
      * 关键点：
      * 如果没有可以上下左右前进的空间该怎么办
      * 如果同时有同样的两个字符都可以前进，但是其中一条得到错误的结果该怎么办（回溯算法？？？）
+     * <p>
+     * 执行用时：
+     * 8 ms
+     * , 在所有 Java 提交中击败了
+     * 31.27%
+     * 的用户
+     * 内存消耗：
+     * 41.6 MB
+     * , 在所有 Java 提交中击败了
+     * 100.00%
+     * 的用户
      *
      * @param board
      * @param word
      * @return
      */
     public static boolean exist(char[][] board, String word) {
+        char[] words = word.toCharArray();
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (dfs(board, words, i, j, 0)) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
+
+    public static boolean dfs(char[][] board, char[] word, int i, int j, int k) {
+        if (i >= board.length || i < 0 || j >= board[0].length || j < 0 || board[i][j] != word[k]) {
+            return false;
+        }
+        if (k == word.length - 1) {
+            return true;
+        }
+        char tmp = board[i][j];
+        board[i][j] = '/';
+        boolean res = dfs(board, word, i + 1, j, k + 1) || dfs(board, word, i - 1, j, k + 1) ||
+                dfs(board, word, i, j + 1, k + 1) || dfs(board, word, i, j - 1, k + 1);
+        board[i][j] = tmp;
+        return res;
+    }
+
 }
