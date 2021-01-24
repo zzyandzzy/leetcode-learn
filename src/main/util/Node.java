@@ -13,4 +13,9 @@ public class Node {
     public Node next;
     public Node child;
     public Node random;
+
+
+    public Node(int val) {
+        this.val = val;
+    }
 }
