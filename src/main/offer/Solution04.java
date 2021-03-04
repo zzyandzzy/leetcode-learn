@@ -41,9 +41,9 @@ package main.offer;
 public class Solution04 {
     public static void main(String[] args) {
         int[][] matrix = new int[][]{
-                {1, 4, 7, 11, 15},
-                {2, 5, 8, 12, 19},
-                {3, 6, 9, 16, 22},
+                {1,  4,  7,  11, 15},
+                {2,  5,  8,  12, 19},
+                {3,  6,  9,  16, 22},
                 {10, 13, 14, 17, 24},
                 {18, 21, 23, 26, 30}
         };
@@ -70,40 +70,34 @@ public class Solution04 {
      * @return
      */
     public static boolean findNumberIn2DArray3(int[][] matrix, int target) {
-        boolean found = false;
-        // 先选择右上角的位置
-        int row = 0;
-        int column = matrix.length - 1;
-        while (matrix != null && column >= 0) {
-            if (row < matrix[column].length) {
-                if (matrix[column][row] == target) {
-                    found = true;
-                    break;
-                } else if (matrix[column][row] > target) {
-                    // 要比目标值小
-                    column--;
-                } else {
-                    // 要比目标值大
-                    row++;
-                }
+        if (matrix == null){
+            return false;
+        }
+        int i = 0;
+        int j = matrix[i].length - 1;
+        while(i < matrix.length){
+            if (matrix[i][j] == target){
+                return true;
+            } else if (matrix[i][j] > target) {
+                j--;
             } else {
-                break;
+                i++;
             }
         }
-        return found;
+        return false;
     }
 
     /**
      * 我们根据题意分析可得，从左往右搜索，遇到比target大的就换下一行
      * 执行用时：
-     * 1 ms
-     * , 在所有 Java 提交中击败了
-     * 23.60%
-     * 的用户
-     * 内存消耗：
-     * 45.4 MB
+     * 0 ms
      * , 在所有 Java 提交中击败了
      * 100.00%
+     * 的用户
+     * 内存消耗：
+     * 44.3 MB
+     * , 在所有 Java 提交中击败了
+     * 28.84%
      * 的用户
      *
      * @param matrix
@@ -111,24 +105,14 @@ public class Solution04 {
      * @return
      */
     public static boolean findNumberIn2DArray2(int[][] matrix, int target) {
-        int row = 0;
-        int column = 0;
-        while (column < matrix.length) {
-            int len = matrix[column].length;
-            while (row < len) {
-                if (matrix[column][row] == target) {
+        for (int i = 0; i < matrix.length; i++) {
+            int len = matrix[i].length;
+            for (int j = 0; j < len; j++) {
+                if (matrix[i][j] == target) {
                     return true;
-                } else if (matrix[column][row] < target) {
-                    row++;
-                } else {
-                    row = 0;
-                    column++;
+                } else if (matrix[i][j] > target) {
                     break;
                 }
-            }
-            if (row == len) {
-                column++;
-                row = 0;
             }
         }
         return false;
