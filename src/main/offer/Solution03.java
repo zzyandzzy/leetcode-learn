@@ -35,9 +35,45 @@ import java.util.Set;
  */
 public class Solution03 {
     public static void main(String[] args) {
-        System.out.println(findRepeatNumber2(new int[]{2, 3, 1, 0, 2, 5, 3}));
-        System.out.println(findRepeatNumber2(new int[]{1, 3, 11, 0, 2, 5, 3}));
-        System.out.println(findRepeatNumber2(new int[]{1, 3}));
+        System.out.println(findRepeatNumber3(new int[]{2, 3, 1, 0, 2, 5, 3}));
+        System.out.println(findRepeatNumber3(new int[]{1, 3, 5, 0, 2, 5, 3}));
+        System.out.println(findRepeatNumber3(new int[]{1, 0, 1}));
+    }
+
+    /**
+     * 交换法，因为数字都在0~n-1之内
+     * <p>
+     * 执行用时：
+     * 0 ms
+     * , 在所有 Java 提交中击败了
+     * 100.00%
+     * 的用户
+     * 内存消耗：
+     * 45.9 MB
+     * , 在所有 Java 提交中击败了
+     * 93.48%
+     * 的用户
+     *
+     * @param nums
+     * @return
+     */
+    public static int findRepeatNumber3(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            while (nums[i] != i) {
+                // 如果要交换的下标本来就是这个数，则说明重复了
+                if (nums[i] == nums[nums[i]]) {
+                    return nums[i];
+                }
+                // 交换下标
+                int temp = nums[i];
+                nums[i] = nums[temp];
+                nums[temp] = temp;
+            }
+        }
+        return -1;
     }
 
     /**
