@@ -1,52 +1,74 @@
 package main.offer;
 
+//请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
+//
+//
+//
+// 示例 1：
+//
+// 输入：s = "We are happy."
+//输出："We%20are%20happy."
+//
+//
+//
+// 限制：
+//
+// 0 <= s 的长度 <= 10000
+// 👍 78 👎 0
+
 /**
- * main.offer
- * 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
- * <p>
- *  
- * <p>
- * 示例 1：
- * <p>
- * 输入：s = "We are happy."
- * 输出："We%20are%20happy."
- *  
- * <p>
- * 限制：
- * <p>
- * 0 <= s 的长度 <= 10000
- * <p>
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- *
- * @author intent zzy.main@gmail.com
- * @date 2020/6/19 5:41 下午
+ * @author intent <a>zzy.main@gmail.com</a>
+ * @date 2021/3/4 15:14
  * @since 1.0
  */
 public class Solution05 {
     public static void main(String[] args) {
-        System.out.println(replaceSpace("We are happy."));
+        System.out.println(replaceSpace2("We are happy."));
     }
 
     /**
-     * 肯定是sb呀
-     * 执行用时：
-     * 0 ms
-     * , 在所有 Java 提交中击败了
-     * 100.00%
-     * 的用户
-     * 内存消耗：
-     * 37.5 MB
-     * , 在所有 Java 提交中击败了
-     * 100.00%
-     * 的用户
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
+     * 执行耗时:0 ms,击败了100.00% 的Java用户
+     * 内存消耗:36.1 MB,击败了94.62% 的Java用户
+     *
+     * @param s
+     * @return
+     */
+    public static String replaceSpace2(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
+        char[] data = new char[s.length() * 3];
+        int size = 0;
+        for (int i = 0, c = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ' ') {
+                data[c++] = '%';
+                data[c++] = '2';
+                data[c++] = '0';
+                size += 3;
+            } else {
+                data[c++] = s.charAt(i);
+                size++;
+            }
+        }
+        return new String(data, 0, size);
+    }
+
+    /**
+     * 想也不想，直接for循环替换
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
+     * <p>
+     * 解答成功:
+     * 执行耗时:0 ms,击败了100.00% 的Java用户
+     * 内存消耗:35.8 MB,击败了99.86% 的Java用户
      *
      * @param s
      * @return
      */
     public static String replaceSpace(String s) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(s.length() * 3);
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == ' ') {
                 sb.append("%20");
