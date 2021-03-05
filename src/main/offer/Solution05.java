@@ -23,7 +23,40 @@ package main.offer;
  */
 public class Solution05 {
     public static void main(String[] args) {
-        System.out.println(replaceSpace2("We are happy."));
+        System.out.println(replaceSpace3("We are happy."));
+    }
+
+    /**
+     * 执行耗时:0 ms,击败了100.00% 的Java用户
+     * 内存消耗:36.5 MB,击败了19.63% 的Java用户
+     *
+     * @param s
+     * @return
+     */
+    public static String replaceSpace3(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
+        // 第一步：统计空格
+        int blankLen = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ' ') {
+                blankLen++;
+            }
+        }
+        // 第二步：创建数组
+        char[] data = new char[s.length() + blankLen * 2];
+        int p2 = data.length - 1;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == ' ') {
+                data[p2--] = '0';
+                data[p2--] = '2';
+                data[p2--] = '%';
+            } else {
+                data[p2--] = s.charAt(i);
+            }
+        }
+        return new String(data);
     }
 
     /**

@@ -21,20 +21,26 @@ class Solution {
         if (s == null || s.length() == 0) {
             return "";
         }
-        char[] data = new char[s.length() * 3];
-        int size = 0;
-        for (int i = 0, c = 0; i < s.length(); i++) {
+        // 第一步：统计空格
+        int blankLen = 0;
+        for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == ' ') {
-                data[c++] = '%';
-                data[c++] = '2';
-                data[c++] = '0';
-                size += 3;
-            } else {
-                data[c++] = s.charAt(i);
-                size++;
+                blankLen++;
             }
         }
-        return new String(data, 0, size);
+        // 第二步：创建数组
+        char[] data = new char[s.length() + blankLen * 2];
+        int p2 = data.length - 1;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == ' ') {
+                data[p2--] = '0';
+                data[p2--] = '2';
+                data[p2--] = '%';
+            } else {
+                data[p2--] = s.charAt(i);
+            }
+        }
+        return new String(data);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
