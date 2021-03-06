@@ -90,19 +90,17 @@ public class Solution0107 {
         // 先水平翻转
         for (int i = 0; i < len / 2; i++) {
             for (int j = 0; j < len; j++) {
-                int posY = len - i - 1;
-                // 交换数据
-                int temp = matrix[posY][j];
-                matrix[posY][j] = matrix[i][j];
-                matrix[i][j] = temp;
+                matrix[i][j] = matrix[i][j] ^ matrix[len - i - 1][j];
+                matrix[len - i - 1][j] = matrix[i][j] ^ matrix[len - i - 1][j];
+                matrix[i][j] = matrix[i][j] ^ matrix[len - i - 1][j];
             }
         }
-        // 再对角线交换
+        // 再对角线翻转
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < i; j++) {
-                int temp = matrix[j][i];
-                matrix[j][i] = matrix[i][j];
-                matrix[i][j] = temp;
+                matrix[i][j] = matrix[i][j] ^ matrix[j][i];
+                matrix[j][i] = matrix[i][j] ^ matrix[j][i];
+                matrix[i][j] = matrix[i][j] ^ matrix[j][i];
             }
         }
         return matrix;
