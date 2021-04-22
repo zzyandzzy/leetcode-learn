@@ -1,4 +1,4 @@
-package main.array;
+package cool.zzy.expore.array;
 
 //给定一个已按照 升序排列 的整数数组 numbers ，请你从数组中找出两个数满足相加之和等于目标数 target 。
 //
