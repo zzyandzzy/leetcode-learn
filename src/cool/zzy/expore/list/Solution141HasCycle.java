@@ -75,7 +75,7 @@ import main.util.ListNode;
  * @date 2021/4/25 21:20
  * @since 1.0
  */
-public class Solution121HasCycle {
+public class Solution141HasCycle {
     public static void main(String[] args) {
         ListNode node = new ListNode(1);
         node.add(2);
