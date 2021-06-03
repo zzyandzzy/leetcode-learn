@@ -1,5 +1,7 @@
 package main.util;
 
+import java.util.Arrays;
+
 /**
  * main.simple.list
  *
@@ -24,8 +26,22 @@ public class ListNode {
         return this;
     }
 
+    public ListNode add(ListNode next) {
+        ListNode q = this;
+        while (q.next != null){
+            q = q.next;
+        }
+        q.next = next;
+        return this;
+    }
+
     public ListNode(int val) {
         this.val = val;
+    }
+
+    public ListNode(int... val) {
+        this.val = val[0];
+        add(Arrays.copyOfRange(val, 1, val.length));
     }
 
     public ListNode(int val, ListNode next) {
