@@ -31,6 +31,9 @@ public class Solution05_ReplaceSpace {
      * 首先肯定想到的是StringBuilder
      * 时间复杂度是 O(n)
      * 空间复杂度是 O(n)
+     * 解答成功:
+     * 执行耗时:0 ms,击败了100.00% 的Java用户
+     * 内存消耗:36.3 MB,击败了43.55% 的Java用户
      *
      * @param s
      * @return
